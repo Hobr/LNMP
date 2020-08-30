@@ -1,12 +1,12 @@
-# LNMP
+# Useful Docker
 
-Fast to run Nginx+MariaDB+PHP and more useful toys on Linux.
-
-All the hosts pass by Traefik.
+Fast to run LNMP/ more useful toys on Linux.
 
 ## Why
 
 I'm going to move all my service on Server to Docker because they have destroyed the system and occupied many important ports.Here will I update all my practice.
+
+All the hosts pass by Traefik.
 
 ## My Environment
 
@@ -22,7 +22,7 @@ I'm going to move all my service on Server to Docker because they have destroyed
 
 > cd LNMP
 
-> docker-compose up -d
+> ./cli.sh install
 ```
 
 Then make your own nginx conf with <https://www.digitalocean.com/community/tools/nginx>
@@ -50,8 +50,8 @@ Then make your own nginx conf with <https://www.digitalocean.com/community/tools
 
 - PHP
 - NodeJs
-- Ruby
-- Django
+- Ruby Rails
+- Python Django
 
 #### Instrument
 
@@ -63,9 +63,10 @@ Then make your own nginx conf with <https://www.digitalocean.com/community/tools
 - Jenkins
 - PostfixAdmin
 - NuxtCloud
+- PHPMyAdmin
 - CertBot(Local)
 
-### PHP Ext
+#### PHP Ext
 
 - OPcache
 - ZendGuardLoader
