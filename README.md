@@ -19,7 +19,7 @@ All the hosts pass by Traefik.
 
 > cd LNMP
 
-> pip3 install fire
+> pip3 install fire python-dotenv
 
 > python3 cli.py install
 ```
@@ -58,7 +58,7 @@ All the hosts pass by Traefik.
 - [ ] Gitea
 - [ ] Drone
 - [ ] Jenkins
-- [ ] NuxtCloud
+- [ ] NextCloud
 - [ ] phpMyAdmin
 - [ ] phpRedisAdmin
 - [ ] [Nginx UI](https://github.com/schenkd/nginx-ui "NginxUI")
