@@ -1,6 +1,6 @@
 # Useful Docker
 
-Fast to run LNMP/ more useful toys on Linux.
+Fast to run web server/sql/ftp and more useful toys on Linux.
 
 ## Why
 
@@ -8,12 +8,9 @@ I'm going to move all my service on Server to Docker because they have destroyed
 
 All the hosts pass by Traefik.
 
-## My Environment
+## Tested System
 
-- System: Ubuntu 20.04
-- CPU: 4Core
-- Ram: 2G
-- Disk Size: 30G
+- [x] Ubuntu 20.04
 
 ## Getting Started
 
@@ -22,58 +19,76 @@ All the hosts pass by Traefik.
 
 > cd LNMP
 
-> ./cli.sh install
+> pip3 install fire
+
+> python3 cli.py install
 ```
 
-Then make your own nginx conf with <https://www.digitalocean.com/community/tools/nginx>
+## Application
 
-## Components
+### Web Server
 
-### Application
+- [ ] Traefik
+- [ ] Nginx
+- [ ] Tengine
+- [ ] OpenResty
 
-#### Web Server
+### DB
 
-- Traefik
-- Nginx
-- Tengine
-- OpenResty
+- [ ] MariaDB
+- [ ] MySQL
+- [ ] PostgreSQL
+- [ ] MongoDB
+- [ ] Memcached
 
-#### DB
+### Language
 
-- MariaDB
-- MySQL
-- PostgreSQL
-- MongoDB
-- Memcached
+- [ ] PHP-fpm
+- [ ] NodeJs
+- [ ] Ruby Rails
+- [ ] Python Django
 
-#### Language
+### Instrument
 
-- PHP
-- NodeJs
-- Ruby Rails
-- Python Django
+- [ ] [Mail Server](https://github.com/tomav/docker-mailserver "MailServer")
+- [ ] Redis
+- [ ] PureFTP
+- [ ] ElasticSearch
+- [ ] Wordpress
+- [ ] Gitea
+- [ ] Drone
+- [ ] Jenkins
+- [ ] NuxtCloud
+- [ ] phpMyAdmin
+- [ ] phpRedisAdmin
+- [ ] [Nginx UI](https://github.com/schenkd/nginx-ui "NginxUI")
 
-#### Instrument
+### PHP Ext
 
-- Redis
-- PureFTP
-- elasticsearch
-- Gitea
-- Drone
-- Jenkins
-- PostfixAdmin
-- NuxtCloud
-- PHPMyAdmin
-- CertBot(Local)
+- [ ] OPcache
+- [ ] ZendGuardLoader
+- [ ] Imagick
+- [ ] Fileinfo
+- [ ] Imap
+- [ ] Redis
+- [ ] Memcached
+- [ ] Mongodb
+- [ ] Swoole
+- [ ] pdo_mysql
+- [ ] mysqli
+- [ ] mbstring
+- [ ] curl
 
-#### PHP Ext
+## Ports
 
-- OPcache
-- ZendGuardLoader
-- Imagick
-- Fileinfo
-- Imap
-- Redis
-- Memcached
-- Mongodb
-- Swoole
+### Recommend
+
+- 80 (HTTPS)
+- 443 (HTTPS)
+- 22 (Gitea)
+- 21 (PureFTP)
+- 8001 (Tool control)
+
+### Optional
+
+- 3306 (MySQL/MariaDB Remote)
