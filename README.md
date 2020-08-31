@@ -11,6 +11,12 @@ All the hosts pass by Traefik.
 ## Tested System
 
 - [x] Ubuntu 20.04
+- [ ] Ubuntu 18.04
+- [x] ArchLinux 2020.8.1
+- [ ] Centos 7
+- [ ] Centos 8
+- [ ] Debian 10
+- [ ] Debian 9
 
 ## Getting Started
 
