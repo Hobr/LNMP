@@ -1,65 +1,29 @@
 version: "3"
-services:
+
   traefik:
-    container_name: Traefik
-    image: traefik:2.2.8
+    image: ./dockerfile/web/Traefik.Dockerfile
     restart: always
+    container_name: Traefik
+    networks:
+      - appnet
     ports:
       - 80:80
       - 443:443
-    networks:
-      - appnet
+      - 8080:8080
+    environment:
+
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./conf/traefik.toml:/etc/traefik.toml
-      - ./conf/ssl:/data/ssl
-      - ./log/traefik:/data/logs
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
 
   nginx:
-    image: nginx:1.19.2
+    image: ./dockerfile/web/Nginx.Dockerfile
     restart: always
     container_name: Nginx
     networks:
       - appnet
     volumes:
-      - ./conf/nginx:/etc/nginx/conf.d
-      - ./log/nginx:/var/log/nginx
-      - ./www/:/var/www/html
-    depends_on:
-      - wp
-    labels:
-      - "traefik.enable=true"
-      - "traefik.frontend.rule=Host:127.0.0.1"
-      - "traefik.frontend.entryPoints=https,http"
-
-  mariadb:
-    image: mariadb:10.5.5
-    restart: always
-    container_name: MariaDB
-    networks:
-      - appnet
-    environment:
-      MYSQL_DATABASE: wp
-      MYSQL_USER: wp
-      MYSQL_PASSWORD: testpass
-      MYSQL_ROOT_PASSWORD: testpass
-    volumes:
-      - ./data/mariadb:/var/lib/mysql
-
-  wp:
-    image: wordpress:5.5.0-fpm
-    restart: always
-    container_name: WordPress
-    networks:
-      - appnet
-    environment:
-      WORDPRESS_DB_HOST: mariadb
-      WORDPRESS_TABLE_PREFIX: wp
-      WORDPRESS_DB_NAME: wp
-      WORDPRESS_DB_USER: wp
-      WORDPRESS_DB_PASSWORD: testpass
-    volumes:
-      - ./www/wp:/var/www/html
+      - /etc/localtime:/etc/localtime:ro
 
 networks:
   appnet:
