@@ -5,7 +5,7 @@ ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 LABEL  traefik.enable=true \
-       traefik.frontend.rule=Host:$() \
+       traefik.frontend.rule=Host:hobr.site \
        traefik.frontend.entryPoints=https,http
 
 VOLUME ./conf/nginx:/etc/nginx/conf.d \

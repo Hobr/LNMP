@@ -1,7 +1,7 @@
 version: "3"
-
+services:
   traefik:
-    image: ./dockerfile/web/Traefik.Dockerfile
+    image: traefik:2.2.8
     restart: always
     container_name: Traefik
     networks:
@@ -10,20 +10,26 @@ version: "3"
       - 80:80
       - 443:443
       - 8080:8080
-    environment:
-
+    command: --api.insecure=true --providers.docker
     volumes:
+      - ./conf/traefik/:/etc/traefik/
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
-
   nginx:
-    image: ./dockerfile/web/Nginx.Dockerfile
+    image: nginx:1.19.2
     restart: always
     container_name: Nginx
+    labels:
+      - "traefik.enable=true"
+      - "traefik.frontend.rule=Host:hobr.site"
+      - "traefik.frontend.entryPoints=https,http"
     networks:
       - appnet
     volumes:
       - /etc/localtime:/etc/localtime:ro
+      - ./conf/nginx:/etc/nginx/conf.d
+      - ./log/nginx:/var/log/nginx
+      - ./www/:/var/www/html
 
 networks:
   appnet:
