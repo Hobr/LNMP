@@ -1,10 +1,10 @@
 # Useful Docker
 
-Fast to run web server/sql/ftp and more useful toys on Linux.
+Fast to run and control web/db/ftp and more useful toys on Docker.
 
 ## Why
 
-I'm going to move all my service on Server to Docker because they have destroyed the system and occupied many important ports.Here will I update all my practice.
+I'm going to move all my service on Server to Docker because they have destroyed the system and occupied many important ports.Here will I update all my practices.
 
 All the hosts pass by Traefik.
 
@@ -21,11 +21,13 @@ All the hosts pass by Traefik.
 ## Getting Started
 
 ```bash
-> git clone https://github.com/Hobr/LNMP.git
+> gh repo clone Hobr/Useful-Docker
 
-> cd LNMP
+> cd Useful-Docker
 
-> pip3 install fire python-dotenv
+> cp .env.example .env
+
+> pip3 install fire python-dotenv Django
 
 > python3 cli.py install
 ```
@@ -90,11 +92,11 @@ All the hosts pass by Traefik.
 
 ### Recommend
 
-- 80 (HTTPS)
+- 80 (HTTP)
 - 443 (HTTPS)
 - 22 (Gitea)
 - 21 (PureFTP)
-- 8001 (Tool control)
+- 8001 (Web Control)
 
 ### Optional
 
