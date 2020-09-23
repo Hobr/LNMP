@@ -12,7 +12,7 @@ All the hosts pass by Traefik.
 
 - [x] Ubuntu 20.04
 - [ ] Ubuntu 18.04
-- [x] ArchLinux 2020.8.1
+- [x] ArchLinux
 - [ ] Centos 7
 - [ ] Centos 8
 - [ ] Debian 10
