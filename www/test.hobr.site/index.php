@@ -2,7 +2,7 @@
 <html>
    <head>
      <title>LNMP</title>
-   </head>    
+   </head>
    <body>
        <div>安装成功！</div>
     <body>
