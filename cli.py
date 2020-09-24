@@ -6,7 +6,7 @@ load_dotenv(override=True)
 
 
 class CLI(object):
-    def install(self):
+    def setup(self):
         return 'CLI'
 
 

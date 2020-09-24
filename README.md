@@ -25,11 +25,9 @@ All the hosts pass by Traefik.
 
 > cd Useful-Docker
 
-> cp .env.example .env
+> pip3 install fire python-dotenv
 
-> pip3 install fire python-dotenv Django
-
-> python3 cli.py install
+> python3 cli.py setup
 ```
 
 ## Application
