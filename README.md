@@ -1,12 +1,13 @@
-# Useful Docker
+# Succotash
 
-Fast to run and control web/db/ftp and more useful toys on Docker.
+Set up and manage your server freely in website with Docker.
 
-## Why
+## Why use
 
-I'm going to move all my service on Server to Docker because they have destroyed the system and occupied many important ports.Here will I update all my practices.
-
-All the hosts pass by Traefik.
+- Deploy quickly(the power of Docker)
+- Manage easily(a good panel online)
+- Non-invasive(most services run in Docker)
+- Customize yourself(edit the .Dockerfile freely)
 
 ## Tested System
 
@@ -21,16 +22,16 @@ All the hosts pass by Traefik.
 ## Getting Started
 
 ```bash
-> gh repo clone Hobr/Useful-Docker
+> gh repo clone Hobr/succotash
 
-> cd Useful-Docker
+> cd succotash
 
 > pip3 install fire python-dotenv
 
 > python3 cli.py setup
 ```
 
-## Application
+## Supported Application
 
 ### Web Server
 
