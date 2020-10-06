@@ -1,5 +1,4 @@
 FROM traefik:2.2.8
-MAINTAINER Hobr<mkowes@vip.qq.com>
 
 ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
