@@ -26,9 +26,9 @@ Set up and manage your server freely in website with Docker.
 
 > cd succotash
 
-> pip3 install fire python-dotenv
+> ./cli.sh install
 
-> python3 cli.py setup
+> ./cli.sh deploy
 ```
 
 ## Supported Application
@@ -37,8 +37,10 @@ Set up and manage your server freely in website with Docker.
 
 - [ ] [Traefik](https://hub.docker.com/_/traefik)
 - [ ] [Nginx](https://hub.docker.com/_/nginx)
-- [ ] [Tengine (Based on Alpine)](https://hub.docker.com/_/alpine)
+- [ ] [Tengine](https://hub.docker.com/_/alpine)
 - [ ] [OpenResty](https://hub.docker.com/r/openresty/openresty)
+- [ ] [Apache Httpd](https://hub.docker.com/_/httpd)
+- [ ] [Apache Tomcat](https://hub.docker.com/_/tomcat)
 
 ### DB
 
@@ -55,21 +57,35 @@ Set up and manage your server freely in website with Docker.
 - [ ] [NodeJS](https://hub.docker.com/_/node)
 - [ ] [Ruby Rails](https://hub.docker.com/_/rails)
 - [ ] [Python Django](https://hub.docker.com/_/django)
+- [ ] [Openjdk](https://hub.docker.com/_/openjdk)
 
 ### Instrument
 
-- [ ] [Mail Server](https://github.com/tomav/docker-mailserver "MailServer")
-- [ ] [Composer](https://hub.docker.com/_/composer)
+- [ ] [Mail Server](https://github.com/tomav/docker-mailserver)
 - [ ] [ElasticSearch](https://hub.docker.com/_/elasticsearch)
+- [ ] [Composer](https://hub.docker.com/_/composer)
+
+### Applacation
+
 - [ ] [WordPress](https://hub.docker.com/_/wordpress)
+- [ ] [NextCloud](https://hub.docker.com/_/nextcloud)
+- [ ] [Owncloud](https://hub.docker.com/_/owncloud)
+- [ ] [Mediawiki](https://hub.docker.com/_/mediawiki)
+
+### CI/CD
+
 - [ ] [Gitea](https://hub.docker.com/r/gitea/gitea)
 - [ ] [Drone Server](https://hub.docker.com/r/drone/drone)
 - [ ] [Drone Runner](https://hub.docker.com/r/drone/drone-runner-docker)
 - [ ] [Jenkins](https://hub.docker.com/_/jenkins)
-- [ ] [NextCloud](https://hub.docker.com/_/nextcloud)
+
+### Management
+
 - [ ] [phpMyAdmin](https://hub.docker.com/_/phpmyadmin)
 - [ ] [phpRedisAdmin](https://hub.docker.com/r/erikdubbelboer/phpredisadmin)
-- [ ] [Nginx UI](https://github.com/schenkd/nginx-ui "NginxUI")
+- [ ] [Mongo Express](https://hub.docker.com/_/mongo-express)
+- [ ] [Nginx UI](https://github.com/schenkd/nginx-ui)
+- [ ] [Postfix Admin](https://hub.docker.com/_/postfixadmin)
 
 ### PHP Ext
 
